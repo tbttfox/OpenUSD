@@ -75,7 +75,7 @@ if platform.system() == "Windows":
                 dll_dir.close()
 
             if _WINDOWS_IMPORT_WRAPPER_DEPTH == 0 and path_updated:
-                os.environ['PATH'] = os.environ['PATH'][:len(import_paths) + 1]
+                os.environ['PATH'] = os.environ['PATH'][len(import_paths) + 1:]
 
         del os, sys
     del contextlib
